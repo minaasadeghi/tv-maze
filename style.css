@@ -1,0 +1,238 @@
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #111;
+    color: red;
+
+}
+
+
+.background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    
+}
+
+.stars {
+    background: url('stars.png') repeat;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    animation: moveStars 50s linear infinite;
+
+}
+
+
+
+.twinkling {
+    background: url('twinkling.png') repeat;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    animation: moveTwinkling 100s linear infinite;
+
+}
+
+
+.clouds {
+    background: url('clouds.png') repeat-x;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    animation: moveClouds 200s linear infinite;
+
+}
+
+
+
+.container {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 1200px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    margin: 20px auto;
+    position: relative;
+    z-index: 1;
+
+}
+
+.header-content {
+    text-align: center;
+    margin-bottom: 20px;
+
+}
+
+h1 {
+    margin-bottom: 10px;
+    font-size: 3em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+
+}
+
+.search-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+
+input[type="text"], select, button {
+    padding: 15px;
+    margin: 5px 10px;
+    border: 1px solid #fcfafa;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.1);
+    font-size: 1.1em;
+    outline: none;
+    color: rgb(210, 33, 157);
+
+}
+
+input[type="text"]::placeholder {
+    color: rgba(229, 239, 241, 0.7);
+}
+
+button {
+    cursor: pointer;
+    background-color: #201c1b;
+    border: none;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #c8f406;
+}
+
+#resultCount {
+    margin: 10px 0;
+    font-size: 1.2em;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+#showGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.show-card {
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(70, 2, 61, 0.5);
+    transition: transform 0.2s ease-in-out;
+    cursor: pointer;
+    position: relative;
+}
+
+.show-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.show-card:hover {
+    transform: scale(1.05);
+}
+
+.show-info {
+    padding: 10px;
+    text-align: center;
+}
+
+.show-info h3 {
+    margin: 10px 0;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.show-info p {
+    font-size: 1em;
+    color: #f8f1f1;
+}
+
+.like-dislike {
+    margin-top: 10px;
+}
+
+.like-button, .dislike-button {
+    font-size: 1.5em;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.show-details {
+    display: none;
+    padding: 10px;
+    color: #ddd;
+    font-size: 0.9em;
+    text-align: left;
+}
+
+.show-card:hover .show-details {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.footer {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.footer p {
+    font-size: 1em;
+    color: #ccc;
+}
+
+.footer a {
+    color: #4CAF50;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: #111;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 800px;
+    width: 90%;
+    color: white;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.close-button {
+    font-size: 1.5em;
+    float: right;
+    cursor: pointer;
+    color: #aaa;
+}
+
+.close-button:hover {
+    color: #fff;
+}

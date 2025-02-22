@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TV Show DOM Project</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background">
+        <div class="stars"></div>
+        <div class="twinkling"></div>
+        <div class="clouds"></div>
+    </div>
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <h1>TV Show Episode Guide</h1>
+                <div class="search-controls">
+                    <input type="text" id="searchInput" placeholder="Search TV shows...">
+                    <select id="genreSelector">
+                        <option value="">Select Genre</option>
+                        <option value="Drama">Drama</option>
+                        <option value="Comedy">Comedy</option>
+                        <option value="Action">Action</option>
+                        <option value="Sci-Fi">Sci-Fi</option>
+                    </select>
+                    <select id="ratingFilter">
+                        <option value="">Select Rating</option>
+                        <option value="9">9+</option>
+                        <option value="8">8+</option>
+                        <option value="7">7+</option>
+                    </select>
+                    <button id="searchButton">Search</button>
+                </div>
+                <p id="resultCount"></p>
+            </div>
+        </header>
+        <div id="showGrid">
+            <div class="show-card" data-genre="Drama" data-rating="9">
+                <img src="./vampire.jpg" alt="The Vampire Diaries">
+                <div class="show-info">
+                    <h3>The Vampire Diaries</h3>
+                    <p>Rating: 9/10</p>
+                    <div class="like-dislike">
+                        <span class="like-button">👍</span>
+                        <span class="dislike-button">👎</span>
+                    </div>
+                </div>
+                <div class="show-details">
+                    <p>The Vampire Diaries is a supernatural drama television series based on the book series of the same name by L.J. Smith. The series follows the life of Elena Gilbert, who falls in love with a vampire named Stefan Salvatore and becomes embroiled in a love triangle with Stefan's brother, Damon.</p>
+                </div>
+            </div>
+            <div class="show-card" data-genre="Fantasy" data-rating="8">
+                <img src="https://static.tvmaze.com/uploads/images/medium_portrait/237/593573.jpg" alt="The Lord of the Rings">
+                <div class="show-details">
+                    <p>The Lord of the Rings is a fantasy series based on the novel by J.R.R. Tolkien. It follows the journey of a young hobbit named Frodo Baggins who is entrusted with the task of destroying a powerful ring that can bring about the end of Middle-earth.</p>
+                </div>
+            </div>
+            <div class="show-card" data-genre="Fantasy" data-rating="8.5">
+                <img src="https://static.tvmaze.com/uploads/images/medium_portrait/237/593573.jpg" alt="The Hobbit">
+                <div class="show-info">
+                    <h3>The Hobbit</h3>
+                    <p>Rating: 8.5/10</p>
+                    <div class="like-dislike">
+                        <span class="like-button">👍</span>
+                        <span class="dislike-button">👎</span>
+                    </div>
+                </div>
+                <div class="show-details">
+                    <p>The Hobbit is a fantasy series based on the novel by J.R.R. Tolkien. It follows the journey of a hobbit named Bilbo Baggins who joins a group of dwarves on a quest to reclaim their homeland from the dragon Smaug.</p>
+                </div>
+            </div>
+            <div class="show-card" data-genre="Fantasy" data-rating="9.2">
+                <img src="https://static.tvmaze.com/uploads/images/medium_portrait/237/593574.jpg" alt="Harry Potter">
+                <div class="show-info">
+                    <h3>Harry Potter</h3>
+                    <p>Rating: 9.2/10</p>
+                    <div class="like-dislike">
+                        <span class="like-button">👍</span>
+                        <span class="dislike-button">👎</span>
+                    </div>
+                </div>
+                <div class="show-details">
+                    <p>Harry Potter is a fantasy series based on the novels by J.K. Rowling. It follows the life of a young wizard named Harry Potter and his adventures at the Hogwarts School of Witchcraft and Wizardry.</p>
+                </div>
+            </div>
+            <div class="show-card" data-genre="Adventure" data-rating="7.5">
+                <img src="https://static.tvmaze.com/uploads/images/medium_portrait/237/593575.jpg" alt="Pirates of the Caribbean">
+                <div class="show-info">
+                    <h3>Pirates of the Caribbean</h3>
+                    <p>Rating: 7.5/10</p>
+                    <div class="like-dislike">
+                        <span class="like-button">👍</span>
+                        <span class="dislike-button">👎</span>
+                    </div>
+                </div>
+                <div class="show-details">
+                    <p>Pirates of the Caribbean is an adventure series that follows the adventures of Captain Jack Sparrow and his crew as they navigate through the treacherous waters of the Caribbean Sea.</p>
+                </div>
+            </div>
+            <div class="show-card" data-genre="Drama" data-rating="8.5">
+                <img src="https://static.tvmaze.com/uploads/images/medium_portrait/237/593576.jpg" alt="The Handmaid's Tale">
+                <div class="show-info">
+                    <h3>The Handmaid's Tale</h3>
+                    <p>Rating: 8.5/10</p>
+                    <div class="like-dislike">
+                        <span class="like-button">👍</span>
+                        <span class="dislike-button">👎</span>
+                    </div>
+
+</div>
+                <div class="show-details">
+                    <p>The Handmaid's Tale is a dystopian drama series based on the novel by Margaret Atwood. It follows the life of Offred, a woman forced into servitude in a society where women have no rights.</p>
+                </div>
+            </div>
+            <div class="show-card" data-genre="Thriller" data-rating="8.8">
+                <img src="https://static.tvmaze.com/uploads/images/medium_portrait/237/593577.jpg" alt="Night Shift">
+                <div class="show-info">
+                    <h3>Night Shift</h3>
+                    <p>Rating: 8.8/10</p>
+                    <div class="like-dislike">
+                        <span class="like-button">👍</span>
+                        <span class="dislike-button">👎</span>
+                    </div>
+                </div>
+                <div class="show-details">
+                    <p>Night Shift is a thriller series that follows the lives of the medical staff working the night shift at San Antonio Memorial Hospital as they deal with the challenges of their demanding jobs.</p>
+                </div>
+            </div>
+            <div class="show-card" data-genre="Biography" data-rating="8.2">
+                <img src="https://static.tvmaze.com/uploads/images/medium_portrait/237/593578.jpg" alt="Ford vs Ferrari">
+                <div class="show-info">
+                    <h3>Ford vs Ferrari</h3>
+                    <p>Rating: 8.2/10</p>
+                    <div class="like-dislike">
+                        <span class="like-button">👍</span>
+                        <span class="dislike-button">👎</span>
+                    </div>
+                </div>
+                <div class="show-details">
+                    <p>Ford vs Ferrari is a biographical drama series that follows the real-life story of the intense rivalry between Ford and Ferrari as they compete to win the 24 Hours of Le Mans in 1966.</p>
+                </div>
+            </div>
+            <div class="show-card" data-genre="Historical" data-rating="9">
+                <img src="https://static.tvmaze.com/uploads/images/medium_portrait/237/593579.jpg" alt="Vikings">
+                <div class="show-info">
+                    <h3>Vikings</h3>
+                    <p>Rating: 9/10</p>
+                    <div class="like-dislike">
+                        <span class="like-button">👍</span>
+                        <span class="dislike-button">👎</span>
+                    </div>
+                </div>
+                <div class="show-details">
+                    <p>Vikings is a historical drama series that follows the adventures of Ragnar Lothbrok, a legendary Viking chieftain, as he rises to become the king of the Viking tribes.</p>
+                </div>
+            </div>
+            <div class="show-card" data-genre="Fantasy" data-rating="9.5">
+                <img src="https://static.tvmaze.com/uploads/images/medium_portrait/237/593580.jpg" alt="Game of Thrones">
+                <div class="show-info">
+                    <h3>Game of Thrones</h3>
+                    <p>Rating: 9.5/10</p>
+                    <div class="like-dislike">
+                        <span class="like-button">👍</span>
+                        <span class="dislike-button">👎</span>
+                    </div>
+                </div>
+                <div class="show-details">
+                    <p>Game of Thrones is a fantasy drama series based on the novels by George R.R. Martin. It follows the power struggles among noble families as they compete for control of the Iron Throne of the Seven Kingdoms.</p>
+                </div>
+            </div>
+            <div class="show-card" data-genre="Crime" data-rating="9">
+                <img src="https://static.tvmaze.com/uploads/images/medium_portrait/237/593581.jpg" alt="Peaky Blinders">
+                <div class="show-info">
+                    <h3>Peaky Blinders</h3>
+                    <p>Rating: 9/10</p>
+                    <div class="like-dislike">
+                        <span class="like-button">👍</span>
+                        <span class="dislike-button">👎</span>
+                    </div>
+                </div>
+                <div class="show-details">
+                    <p>Peaky Blinders is a crime drama series that follows the Shelby crime family in the aftermath of World War I as they rise to power in Birmingham, England.</p>
+                </div>
+            </div>
+            <div class="show-card" data-genre="Drama" data-rating="8.5">
+                <img src="https://static.tvmaze.com/uploads/images/medium_portrait/237/593582.jpg" alt="The 100">
+                <div class="show-info">
+                    <h3>The 100</h3>
+                    <p>Rating: 8.5/10</p>
+                    <div class="like-dislike">
+                        <span class="like-button">👍</span>
+                        <span class="dislike-button">👎</span>
+                    </div>
+                </div>
+                <div class="show-details">
+                    <p>The 100 is a post-apocalyptic drama series that follows a group of young survivors who are sent back to Earth after a devastating nuclear apocalypse to see if it is habitable again.</p>
+                </div>
+            </div>
+            <div class="show-card" data-genre="Comedy" data-rating="9.5">
+                <img src="https://static.tvmaze.com/uploads/images/medium_portrait/237/593583.jpg" alt="Friends">
+                <div class="show-info">
+                    <h3>Friends</h3>
+                    <p>Rating: 9.5/10</p>
+                    <div class="like-dislike">
+                        <span class="like-button">👍</span>
+                        <span class="dislike-button">👎</span>
+                    </div>
+                </div>
+                <div class="show-details">
+                    <p>Friends is a comedy series that follows the lives and adventures of six friends living in New York City as they navigate through their personal and professional lives.</p>
+                </div>
+            </div>
+            <div class="show-card" data-genre="Thriller" data-rating="9">
+                <img src="https://static.tvmaze.com/uploads/images/medium_portrait/237/593584.jpg" alt="Prison Break">
+                <div class="show-info">
+                    <h3>Prison Break</h3>
+                    <p>Rating: 9/10</p>
+                    <div class="like-dislike">
+                        <span class="like-button">👍</span>
+                        <span class="dislike-button">👎</span>
+                    </div>
+                </div>
+                <div class="show-details">
+                    <p>Prison Break is a thriller series that follows the story of two brothers, one of whom is sentenced to death for a crime he did not commit. The other brother devises an elaborate plan to help him escape from prison.</p>
+                </div>
+            </div>
+            <div class="show-card" data-genre="Horror" data-rating="8.5">
+                <img src="https://static.tvmaze.com/uploads/images/medium_portrait/237/593585.jpg" alt="From">
+                <div class="show-info">
+                    <h3>From</h3>
+                    <p>Rating: 8.5/10</p>
+                    <div class="like-dislike">
+                        <span class="like-button">👍</span>
+                        <span class="dislike-button">👎</span>
+                    </div>
+                </div>
+                <div class="show-details">
+                    <p>From is a horror series that follows the story of a small town where people mysteriously disappear without a trace. The residents are trapped in a nightmarish reality where they must uncover the dark secrets of the town to survive.</p>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <p>Data sourced from <a href="https://www.google.com" target="_blank">google</a></p>
+        </footer>
+    </div>
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button"></span>
+            <div id="modal-info">
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
